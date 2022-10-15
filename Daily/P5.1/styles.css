@@ -1,0 +1,540 @@
+/******{ *General}**********************************************************************/
+* {
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+/******{ *General}**********************************************************************/
+
+/******{ preLoader! }**********************************************************************/
+/*
+#preLoader {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background:#050505 url(./content/loader1-unscreen.gif) no-repeat center;
+    
+    
+    
+    }
+    
+    #preLoader h1 {   
+    text-align: center;
+    margin-top: 35%;
+    color:rgba(248, 245, 245, 0.9);
+    -webkit-font-smoothing: antialiased;
+    font-family: ag;
+    font-size: 40px;
+    }  
+    */
+  /******{ preLoader! }**********************************************************************/
+  
+/******{ body }**********************************************************************/
+html, body {
+  overflow-x:hidden;
+  position: relative;
+  font-family: robo;
+}
+body {
+    background-color: rgb(4, 4, 4);
+}
+/******{ body }**********************************************************************/
+
+
+/******{ nav }**********************************************************************/
+nav {
+  display: flex;
+  justify-content: space-around ;
+  align-items: center;
+  min-height: 10vh;
+  font-family: robo;
+}
+.WordMark {
+  color: rgb(255, 0, 140);
+  letter-spacing: 3px;
+  font-size: 20px;
+  font-family: day;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  letter-spacing: 2px;
+  font-size: 24px;
+  font-weight: bold;
+  
+}
+.nav-links a{
+  color: #fffcfc;
+
+}
+.burger {
+  display: none;
+}
+
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color:rgb(250, 250, 250);
+  margin: 5px;
+  transition: all 0.3s ease-in;
+}
+/******{ nav media }**********************************************************************/
+@media (max-width: 952px){
+ .nav-links {
+  width: 60%;
+ }
+}
+
+@media (max-width: 858px){
+  body{
+      overflow-x: hidden;
+  }
+  nav {
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    z-index: 1;
+  }
+  .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+      width: 100%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in; 
+      text-align: center;
+     }
+     .nav-links li{
+      opacity: 1;
+      padding-bottom: 1%;
+      text-align: center;
+      margin-right: 0%;
+     }
+     .burger {
+      display: block;
+     }
+     
+        
+  }
+  
+  .nav-active {
+     transform: translateX(0%);
+     position: fixed;
+  }
+
+
+/******{nav animations }**********************************************************************/
+@keyframes navLinkFade {
+      from{
+          opacity: 0;
+          transform: translateX(50px);
+      }
+      to{
+          opacity: 1;
+          transform: translateX(0px);
+
+      }
+}
+
+.toggle .line1{    
+  transform: rotate(-45deg) translate(-5px, 6px);
+
+}
+.toggle .line2{    
+  opacity: 0;
+}
+.toggle .line3{    
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+/******{ nav animations}**********************************************************************/
+/******{ nav media }**********************************************************************/
+/******{ nav  }**********************************************************************/
+
+/******{ intro}**********************************************************************/
+/******{ intro}**********************************************************************/
+
+
+/******{ Content }**********************************************************************/
+.intro {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(4, 4, 4);
+    color: white;
+    text-align: center;
+    margin: auto;
+    display: flex;
+
+}
+.intro img{
+  border-radius: 25% 75% 25% 75%;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 60%;
+  width: 25%;
+}
+.intro h1 {
+    margin-top: 20%;
+    font-size: 70px;
+    width: 40%;
+    margin-left: 10%;
+    position: absolute;
+
+}
+
+.intro h1 span 
+{
+  font-family: day1;
+  color: rgb(255, 0, 140);
+}
+.intro2 {
+    height: 20vh;
+    width: 100%;
+    background-color: rgb(4, 4, 4);
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 150%;
+}
+.intro2 h3{
+    width: 50%;
+    margin: auto;
+    margin-top: 2%;
+}
+.gallary {
+    height: 100%;
+    width: 100%;
+    color: white;
+    
+}
+.gallary h1 {
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-family: day1;
+    font-size: 250%;
+}
+.gallary h1 span {
+    font-family: day;
+    color: rgb(255, 0, 140);
+
+}
+.gallary .imgcont {
+
+display: flex;
+margin: auto;
+text-align: center;
+}
+
+.gallary .imgcont .img {
+ width: 30%;
+ margin: auto;
+text-align: center;
+border-radius: 50px 0 0 50px;
+color: white;
+}
+
+.gallary .imgcont .img img {
+    width: 70%;
+    height: 80%;
+    border-radius: 55% 55% 0px 0px;
+}
+
+.fashion {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.fashion img {
+    width: 20%;
+    margin: 5% 5%;
+    border-radius: 25px
+}
+
+.res {
+
+text-align: center;
+
+
+margin-bottom: 10%;
+}
+.res h3, ul {
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 10px;
+  font-size: 150%;
+}
+.res h3 {
+  margin-left: 100px;
+}
+
+.res ul {
+  margin-left: 175px;
+}
+
+.vision {
+  text-align: center;
+
+  margin: auto;
+  width: 40%;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin: 10%;
+}
+.contact {
+  text-align: center;
+  margin-top: 10%;
+  color: white;
+
+}
+
+.contactlinks {
+  font-size: 140%
+}
+
+.contactContainer .contactlinks a {
+  color: white;
+
+}
+
+
+
+
+/******{ Content }**********************************************************************/
+
+
+/******{ footer}*************************************************************************/
+
+footer {
+text-align: center;
+color: whitesmoke;
+
+}
+
+footer .copyright {
+  text-align: center;
+  font-size: 50%;
+  margin: 1%;
+}
+
+
+
+
+
+/********{ footer}**********************************************************************/
+
+
+
+/******{Responsive-Media}**********************************************************************/
+ @media (max-width: 958px){
+
+ .intro {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(4, 4, 4);
+    color: white;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.intro img{
+  border-radius: 25% 75% 25% 75%;
+  position: relative;
+margin: auto;
+  width: 45%;
+  display: none;
+}
+.intro h1 {
+    margin-top: 20%;
+    font-size: 40px;
+    width: 40%;
+    margin: auto;
+    position:relative;
+
+}
+
+.intro h1 span 
+{
+  font-family: day1;
+  color: rgb(255, 0, 140);
+}
+.intro2 {
+    height: 20vh;
+    width: 100%;
+    background-color: rgb(4, 4, 4);
+    color: white;
+    text-align: center;
+    margin-top: 0%;
+    font-size: 100%;
+}
+.intro2 h3{
+    width: 50%;
+    margin: auto;
+    margin-top: 2%;
+}
+.gallary {
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+.gallary h1 {
+    text-align: center;
+    margin-top: 70%;
+    margin-bottom: 5%;
+    font-family: day1;
+    font-size: 250%;
+}
+.gallary h1 span {
+    font-family: day;
+    color: rgb(255, 0, 140);
+
+}
+.gallary .imgcont {
+
+display: flex;
+flex-direction: column;
+margin: auto;
+text-align: center;
+}
+.imgcont .img h2 {
+  font-size: 100%;
+}
+.gallary .imgcont .img {
+ width: 70%;
+ margin-top: 5%;
+ margin: auto;
+text-align: center;
+border-radius: 50px 50px 50px 50px;
+color: white;
+}
+
+.gallary .imgcont .img img {
+    width: 70%;
+    height: 80%;
+    border-radius: 50% 50% 50% 50%;
+    margin-top: 20%;
+}
+
+.fashion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.fashion img {
+    width: 90%;
+    margin: 5% 5%;
+    border-radius: 25px
+}
+
+.res {
+
+text-align: center;
+
+
+margin-bottom: 10%;
+}
+.res h3, ul {
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 10px;
+  font-size: 150%;
+}
+.res h3 {
+  margin-left: 10px;
+}
+
+.res ul {
+  margin-left:45px;
+}
+
+.vision {
+  text-align: center;
+
+  margin: auto;
+  width: 80%;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin: 10%;
+}
+.contact {
+  text-align: center;
+  margin-top: 10%;
+  color: white;
+
+}
+
+.contactlinks {
+  font-size: 140%
+}
+
+.contactContainer .contactlinks a {
+  color: white;
+  
+}
+
+ }
+
+ @media (max-width: 858px){
+
+  .gallary {
+
+  }
+  
+  .gallary .imgcont {
+  
+  
+  }
+  
+  .gallery .imgcont img {
+    
+  }
+ }
+
+
+
+/******{Responsive-Media}**********************************************************************/
+
+
+
+/******{animations }**********************************************************************/
+/******{animations}**********************************************************************/
+
+/******{text-animation  }**********************************************************************/
+
+@font-face{
+    font-family: 'robo';
+    src: url('./content/Roboto-Thin.ttf')
+}
+@font-face{
+    font-family: 'day';
+    src: url('./content/Great\ Day\ bold\ Personal\ Use\ copy.ttf')
+}
+@font-face{
+    font-family: 'day1';
+    src: url('./content/Great\ Day\ Personal\ Use.ttf')
+}
+
+/******{text-animation}**********************************************************************/
