@@ -1,0 +1,299 @@
+/******{ *General}**********************************************************************/
+* {
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/******{ *General}**********************************************************************/
+
+/******{ body }**********************************************************************/
+html, body {
+  overflow-x:hidden;
+  position: relative;
+}
+body {
+    background-color: rgb(255, 255, 255);
+}
+/******{ body }**********************************************************************/
+
+
+/******{ preLoader! }**********************************************************************
+
+#preLoader {
+
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background:#050505 url(./content/loader1-unscreen.gif) no-repeat center;
+  
+  
+  
+  }
+  
+  #preLoader h1 {   
+  text-align: center;
+  margin-top: 35%;
+  color:rgba(248, 245, 245, 0.9);
+  -webkit-font-smoothing: antialiased;
+  font-family: ag;
+  font-size: 40px;
+  }
+******{ preLoader! }**********************************************************************/
+
+
+/******{ nav }**********************************************************************/
+nav {
+  display: flex;
+  justify-content: space-around ;
+  align-items: center;
+  min-height: 10vh;
+  font-family: 'ag';
+  width: 100%;
+}
+.WordMark {
+  color: #040404;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 25px;
+  font-family:over ;
+  width: 40%
+  
+}
+.WordMark img 
+{
+  width: 40%;
+  position: relative;
+  margin-left: 20%;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: bold;
+ margin-left: 20%;
+ font-family: over;
+}
+.nav-links a{
+  color: #040404;
+  padding-bottom: 5%;
+  font-family: robo;
+}
+.nav-links a:hover{
+  
+  padding-bottom: 5%;
+  font-size: 120%;
+  transition: .8s;
+  border-bottom: 2px solid rgb(237, 9, 9);
+
+}
+.burger {
+  display: none;
+}
+
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color:rgb(251, 3, 3);
+  margin: 5px;
+  transition: all 0.3s ease-in;
+}
+
+
+
+/******{ nav media }**********************************************************************/
+@media (max-width: 952px){
+  .nav-links {
+   width: 60%;
+  }
+}
+
+@media (max-width: 858px){
+   body{
+       overflow-x: hidden;
+   }
+   .WordMark img 
+   {
+     width: 100%;
+     position: relative;
+     margin-left: 20%;
+   }
+   .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in; 
+    text-align: center;
+   }
+   .nav-links li{
+    opacity: 1;
+    padding-bottom: 1%;
+    text-align: center;
+    margin-right: 0%;
+   }
+   .burger {
+    display: block;
+   }
+   
+      
+}
+
+.nav-active {
+   transform: translateX(0%);
+   position: fixed;
+}
+.body { 
+  position: fixed;
+}
+/******{nav animations }**********************************************************************/
+@keyframes navLinkFade {
+  from{
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to{
+      opacity: 1;
+      transform: translateX(0px);
+
+  }
+}
+
+.toggle .line1{    
+transform: rotate(-45deg) translate(-5px, 6px);
+
+}
+.toggle .line2{    
+opacity: 0;
+}
+.toggle .line3{    
+transform: rotate(45deg) translate(-5px, -6px);
+}
+/******{ nav animations}**********************************************************************/
+
+
+/******{ nav media }**********************************************************************/
+/******{ nav  }**********************************************************************/
+
+/******{ intro}**********************************************************************/
+/******{ intro}**********************************************************************/
+
+
+/******{ Content }**********************************************************************/
+
+.title {
+  color: black;
+text-align: center;
+font-family: robo;
+}
+
+.title h2 {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 200%;
+}
+
+
+.gallary {
+  width:90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.gallary .imgCont {
+  width: 30%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}
+.gallary .imgCont img {
+width: 100%;
+
+
+}
+
+#about {
+  color: black;
+  text-align: center;
+  font-family: over;
+  font-size: 35px;
+}
+#cont {
+  color: black;
+  text-align: center;
+  font-family: robo;
+  font-size: 15px;
+}
+#cont a h2 {
+  margin-top: 20%;
+  color: black;
+}
+
+/******{ Content }**********************************************************************/
+
+/******{Responsive-Media}**********************************************************************/
+
+@media (max-width: 958px) {
+
+.gallary {
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.gallary .imgCont {
+  width: 70%;
+}
+
+  #about {
+    color: black;
+    text-align: center;
+    font-family: over;
+    font-size: 15px;
+  }
+  #cont {
+    color: black;
+    text-align: center;
+    font-family: robo;
+    font-size: 15px;
+  }
+  #cont a h2 {
+    margin-top: 30px;
+    color: black;
+  }
+}
+
+
+/******{Responsive-Media}**********************************************************************/
+
+
+
+/******{animations }**********************************************************************/
+/******{animations}**********************************************************************/
+
+/******{text-animation  }**********************************************************************/
+@font-face {
+  font-family: 'over';
+  src: url("../content/Overwave.ttf")
+}
+
+@font-face {
+  font-family: 'robo';
+  src: url("../content/Roboto-Thin.ttf")
+}
+/******{text-animation}**********************************************************************/
+
