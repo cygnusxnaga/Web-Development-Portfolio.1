@@ -1,0 +1,361 @@
+/******{ *General}**********************************************************************/
+* {
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    line-height: 120%;
+    font-weight: bold;
+}
+
+/******{ *General}**********************************************************************/
+
+/******{ preLoader! }**********************************************************************/
+/*
+#preLoader {
+
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background:#050505 url(./content/loader1-unscreen.gif) no-repeat center;
+    
+    
+    
+    }
+    
+    #preLoader h1 {   
+    text-align: center;
+    margin-top: 35%;
+    color:rgba(248, 245, 245, 0.9);
+    -webkit-font-smoothing: antialiased;
+    font-family: ag;
+    font-size: 40px;
+    }  
+    */
+  /******{ preLoader! }**********************************************************************/
+  
+/******{ body }**********************************************************************/
+html, body {
+  overflow-x:hidden;
+  position: relative;
+}
+body {
+    background-color: rgba(0, 0, 0, 0.866);
+    color: white;
+    font-family: 'robo';
+}
+/******{ body }**********************************************************************/
+
+
+/******{ nav }**********************************************************************/
+nav {
+  display: flex;
+  justify-content: space-around ;
+  align-items: center;
+  min-height: 10vh;
+  font-family: 'ag';
+  width: 100%;
+  top: 0;
+  position: fixed;
+  background-color: rgb(165, 42, 149);
+}
+.WordMark {
+  color: #fefefe;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 20px;
+  font-family: robo;
+}
+.WordMark h2 {
+  font-size: 15px;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: bold;
+  
+}
+.nav-links a{
+  color: #010101;
+  font-family: mont;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+}
+.burger {
+  display: none;
+}
+
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color:rgb(255, 255, 255);
+  margin: 5px;
+  transition: all 0.3s ease-in;
+}
+/******{ nav media }**********************************************************************/
+@media (max-width: 952px){
+ .nav-links {
+  width: 60%;
+ }
+}
+
+@media (max-width: 8058px){
+  body{
+      overflow-x: hidden;
+  }
+  .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 10vh;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+  
+      width: 100%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in; 
+    
+     }
+     .nav-links li{
+      opacity: 1;
+      padding-bottom: 1%;
+      margin-left: 5%;
+     }
+     .burger {
+      display: block;
+     }
+     
+}
+
+
+.nav-active {
+  transform: translateX(0%)
+}
+
+
+/******{nav animations }**********************************************************************/
+@keyframes navLinkFade {
+      from{
+          opacity: 0;
+          transform: translateX(50px);
+      }
+      to{
+          opacity: 1;
+          transform: translateX(0px);
+
+      }
+}
+
+.toggle .line1{    
+  transform: rotate(-45deg) translate(-5px, 6px);
+
+}
+.toggle .line2{    
+  opacity: 0;
+}
+.toggle .line3{    
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+/******{ nav animations}**********************************************************************/
+/******{ nav media }**********************************************************************/
+/******{ nav  }**********************************************************************/
+
+
+
+
+/******{ intro}**********************************************************************/
+/******{ intro}**********************************************************************/
+
+
+
+/******{ Content }**********************************************************************/
+
+@media(min-width: 958px) {
+
+
+
+  .section1 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .section1 .content {
+    text-align: left;
+    margin-top: 15%;
+    justify-content: space-around;
+  }
+
+  .section1 .content h1, h2, h3 {
+    margin-top: 2%;
+  }
+  .section1 .content h1 {
+    width: 70%;
+    text-align: left;
+    margin: auto;
+    margin-top: 3%;
+    margin-left: 10%;
+    font-family: robo;
+    border-bottom: 2px solid
+  }
+  .section1 .content h2 {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    font-size: 250%;
+  }
+  .section1 .content h3 {
+    width: 70%;
+    text-align: left;
+    margin: auto;
+    margin-top: 1%;
+    font-family: mont;
+  }
+  .section1 .content .Assessment ol li {
+    width: 70%;
+    margin: auto;
+    letter-spacing: 2px;
+    line-height: 120%;
+    font-weight: bold;
+    font-family: mont;
+    padding: 3%;
+  }
+  .section2 .content {
+    display: flex;
+  }
+  .section2 .content img {
+    text-align: center;
+    margin: auto;
+    margin-left: 10%;
+    border-radius: 50%;
+  }
+  .section2 .content h3 {
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+
+
+  footer {
+    padding: 5%
+  }
+  .linkedin {
+    width: 25px;
+  }
+  .linkedin img{
+    width: 25px;
+  }
+}
+/******{ Content }**********************************************************************/
+
+/******{Responsive-Media}**********************************************************************/
+
+@media(max-width: 958px) {
+
+
+  .linkedin {
+    width: 20%;
+  }
+  .linkedin img{
+    width: 25px;
+  }
+  .section1 {
+    width: 100%;
+    height: 100%;
+  }
+.section1 {
+  width: 100%;
+  height: 100%;
+}
+
+.section1 .content {
+  text-align: left;
+  margin-top: 15%;
+  justify-content: space-around;
+}
+
+.section1 .content h1, h2, h3 {
+  margin-top: 2%;
+}
+.section1 .content h1 {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  margin-top: 3%;
+  font-family: robo;
+  border-bottom: 2px solid;
+}
+.section1 .content h2 {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  font-size: 150%;
+  padding: 10%;
+  margin-top: 30%
+}
+.section1 .content h3 {
+  width: 80%;
+  text-align: left;
+  margin: auto;
+  margin-top: 10%;
+  font-family: mont;
+}
+.section1 .content .Assessment ol li {
+  width: 70%;
+  margin: auto;
+  letter-spacing: 2px;
+  line-height: 120%;
+  font-weight: bold;
+  font-family: mont;
+  padding: 3%;
+}
+.section2 .content {
+  display: flex;
+}
+.section2 .content img {
+  text-align: center;
+  margin: auto;
+  margin-left: 10%;
+  border-radius: 50%;
+}
+.section2 .content h3 {
+  width: 80%;
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+
+footer {
+  padding: 5%
+}
+}
+
+
+/******{Responsive-Media}**********************************************************************/
+
+
+
+/******{animations }**********************************************************************/
+/******{animations}**********************************************************************/
+
+/******{text-animation  }**********************************************************************/
+@font-face{
+  font-family: 'robo';
+  src: url(../content/Roboto-Thin.ttf);
+}
+@font-face{
+  font-family: 'mont';
+  src: url(../content/Montserrat-VariableFont_wght.ttf);
+}
+/******{text-animation}**********************************************************************/
+
