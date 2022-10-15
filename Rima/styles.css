@@ -1,0 +1,465 @@
+/******{ *General}**********************************************************************/
+
+* {
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/******{ *General}**********************************************************************/
+
+/******{ body }**********************************************************************/
+html, body {
+    overflow-x:hidden;
+    position: relative;
+  }
+
+/******{ body }**********************************************************************/
+
+/******{ nav }**********************************************************************/
+
+nav {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around ;
+    align-items: center;
+    min-height: 10vh;
+    font-family: 'italy';
+
+  }
+  .WordMark {
+    color: #050505;
+    letter-spacing: 3px;
+    font-size: 45px;
+    font-family:austin;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: bold;
+   
+    
+  }
+  .nav-links a{
+    color: #030303;
+    padding-bottom: 5%;
+    font-size: 20px;
+  }
+  .nav-links a:hover{
+    
+    padding-bottom: 5%;
+    font-size: 120%;
+    transition: .8s;
+  }
+  .burger {
+    display: none;
+  }
+  
+  .burger div{
+    width: 25px;
+    height: 3px;
+    background-color:rgb(0, 0, 0);
+    margin: 5px;
+    transition: all 0.3s ease-in;
+  }
+  
+
+/******{ nav media }**********************************************************************/
+@media (max-width: 952px){
+    .nav-links {
+     width: 60%;
+    }
+    nav {
+        flex-direction:row;
+    }
+  }
+  
+  @media (max-width: 858px){
+     body{
+         overflow-x: hidden;
+     }
+     nav {
+        flex-direction:row;
+     }
+     .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 13vh;
+        background-color: rgb(7, 7, 7);
+        display: flex;
+        flex-direction: column;
+        z-index: 999;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in; 
+        text-align: right;
+       }
+       .nav-links li{
+        opacity: 1;
+        padding-bottom: 1%;
+        text-align: center;
+        margin-right: 0%;
+        margin-bottom: 20%;
+
+       }
+       .burger {
+        display: block;
+       }
+       .nav-links a{
+        color: #f8f2f2;
+        padding-bottom: 5%;
+        font-size: 20px;
+      }
+     
+        
+  }
+  
+  .nav-active {
+     transform: translateX(0%);
+     position: fixed;
+    }
+    .body { 
+      position: fixed;
+    }
+  /******{nav animations }**********************************************************************/
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+  
+    }
+  }
+  
+  .toggle .line1{    
+  transform: rotate(-45deg) translate(-5px, 6px);
+  
+  }
+  .toggle .line2{    
+  opacity: 0;
+  }
+  .toggle .line3{    
+  transform: rotate(45deg) translate(-5px, -6px);
+  }
+  /******{ nav animations}**********************************************************************/
+ 
+
+/******{ nav media }**********************************************************************/
+/******{ nav  }**********************************************************************/
+
+/******{ intro}**********************************************************************/
+.header {
+
+    font-family: austin;
+    font-size: 200%;
+    width: 100%;
+    margin: auto;
+
+    
+}
+.header h1 {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    margin-top: 15%;
+    font-family:;
+
+}
+.header h1 span {
+    font-family: robo;
+    font-size: 150%;
+    margin-left: 1%;
+
+}
+.header h5 {
+
+    text-align: center;
+    font-size: 70%;
+    font-family: italy;
+
+}
+
+
+/******{ intro}**********************************************************************/
+
+
+/******{ Content }**********************************************************************/
+
+.film {
+
+    text-align: center;
+    margin-top: 10%;
+    font-family: robo;
+
+}
+.gallery {
+    width: 100%;
+    margin-top: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.gallery .vid {
+
+    
+    margin-left: 5%;
+    margin-right: 5%;
+    margin: 5%;
+
+}
+
+.gallery .vid iframe {
+ width: 100%;
+height: 100%;
+object-fit: contain;
+}
+
+footer {
+    border-top: 1px solid;
+    height: 70%;
+}
+
+.contact h5 {
+    font-size: 200%;
+    font-family: robo;
+    text-align: center;
+
+
+}
+
+.links a img {
+    width: 5%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+
+.links a {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+.links {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+.tw {
+    width: 5%;
+    height: 6%;
+}
+.contact a h2 {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    color: #030303;
+
+}
+.links {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+.tw {
+    width: 5%;
+    height: 6%;
+}
+.contact {
+    margin: 5%;
+}
+
+
+/******{ Content }**********************************************************************/
+
+/******{Responsive-Media}**********************************************************************/
+
+@media (max-width: 952px) {
+
+    .header {
+
+        font-family: austin;
+        width: 100%;
+        margin: auto;
+    
+        
+    }
+    .header h1 {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        position: relative;
+        margin-top: 25%;
+        font-family:;
+        font-size: 110%;
+
+    
+    }
+    .header h1 span {
+        font-family:robo;
+        font-size: 150%;
+        margin-left: 1%;
+    
+    }
+    .header h5 {
+        text-align: center;
+        font-size: 50%;
+        font-family: italy;
+        margin-bottom: 25%;
+    }
+    
+    .film{
+        text-align: center;
+        margin-top: 10%;
+        font-family: robo;
+    }
+
+    .gallery {
+
+        margin-top: 0%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .gallery .vid {
+        width: 20%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin: 5%;
+    
+    }
+    
+    .gallery .vid iframe {
+     width: 100%;
+    
+    }
+    
+    footer {
+        border-top: 1px solid;
+        height: 70%;
+    }
+    
+    .contact h5 {
+        font-size: 200%;
+        font-family: robo;
+        text-align: center;
+
+    
+    }
+    
+    .links a img {
+        width: 5%;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        margin: auto;
+    }
+    
+    .links a {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        margin: auto;
+    }
+    .contact a h2 {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        color: #030303;
+
+    }
+    .links {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        margin: auto;
+    }
+    .tw {
+        width: 5%;
+        height: 6%;
+    }
+    .contact {
+        margin: 10%;
+    }
+}
+
+@media (max-width: 858px) {
+    .gallery {
+    
+        margin-top: 0%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .gallery .vid {
+        width: 100%;
+        height: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin: 5%;
+        margin-bottom: 10%;
+    
+    }
+    
+    .gallery .vid iframe {
+     width: 100%;
+    
+    }
+}
+/******{Responsive-Media}**********************************************************************/
+
+
+
+/******{animations }**********************************************************************/
+/******{animations}**********************************************************************/
+
+
+
+
+/******{text-animation  }**********************************************************************/
+ @font-face {
+    font-family: 'austin';
+    src: url("./content/Austin.otf")
+ }
+
+ @font-face {
+    font-family: 'italy';
+    src: url("./content/Italiana-Regular.ttf")
+ }
+
+ @font-face {
+    font-family: 'robo';
+    src: url("./content/Roboto-Thin.ttf")
+ }
+
+/******{text-animation}**********************************************************************/
+
